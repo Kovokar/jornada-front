@@ -1,15 +1,18 @@
 import os
 
 def criar_pastas_e_arquivos():
-    for i in range(1, 11):  # Loop de 1 a 10
+    for i in range(2, 11):  # Loop de 1 a 10
         pasta = f"aula{i}"
         os.makedirs(pasta, exist_ok=True)  # Cria a pasta se não existir
         
         # Criar index.html
         with open(os.path.join(pasta, "index.html"), "w") as html_file:
-            html_file.write(f"""<!DOCTYPE html>
-<html>
+            html_file.write(
+f"""<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula {i}</title>
     <link rel='stylesheet' type='text/css' href='style.css'>
 </head>
@@ -18,7 +21,7 @@ def criar_pastas_e_arquivos():
 </body>
 </html>""")
         
-        # Criar style.css
+ # Criar style.css
         with open(os.path.join(pasta, "style.css"), "w") as css_file:
             css_file.write("""body {
     font-family: Arial, sans-serif;
