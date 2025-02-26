@@ -1,8 +1,8 @@
 import os
 
 def criar_pastas_e_arquivos():
-    for i in range(2, 11):  # Loop de 1 a 10
-        pasta = f"aula{i}"
+    for i in range(1, 11):  # Loop de 1 a 10
+        pasta = f"aula_css{i}"
         os.makedirs(pasta, exist_ok=True)  # Cria a pasta se não existir
         
         # Criar index.html
