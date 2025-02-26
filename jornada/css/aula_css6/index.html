@@ -1,12 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 6</title>
-    <link rel='stylesheet' type='text/css' href='style.css'>
+    <title>Exemplos de Display</title>
+    <style>
+        .block {
+            display: block;
+            background-color: lightblue;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .inline {
+            display: inline;
+            background-color: yellow;
+            padding: 5px;
+        }
+        .inline-block {
+            display: inline-block;
+            background-color: lightcoral;
+            padding: 10px;
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            margin: 5px;
+        }
+        .flex-container {
+            display: flex;
+            gap: 10px;
+            background-color: lightgray;
+            padding: 10px;
+        }
+        .flex-item {
+            background-color: deepskyblue;
+            padding: 10px;
+            text-align: center;
+            flex: 1;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            background-color: lightgray;
+            padding: 10px;
+        }
+        .grid-item {
+            background-color: orange;
+            padding: 10px;
+            text-align: center;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bem-vindo à Aula 6</h1>
+
+    <h2>display: block;</h2>
+    <div class="block">Elemento Block 1</div>
+    <div class="block">Elemento Block 2</div>
+
+    <h2>display: inline;</h2>
+    <span class="inline">Texto 1</span>
+    <span class="inline">Texto 2</span>
+
+    <h2>display: inline-block;</h2>
+    <div class="inline-block">A</div>
+    <div class="inline-block">B</div>
+
+    <h2>display: flex;</h2>
+    <div class="flex-container">
+        <div class="flex-item">Item 1</div>
+        <div class="flex-item">Item 2</div>
+        <div class="flex-item">Item 3</div>
+    </div>
+
+    <h2>display: grid;</h2>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+
+    <h2>display: none;</h2>
+    <p class="hidden">Este texto está oculto</p>
+    <p>Este texto será exibido normalmente</p>
+
+    <h2>Explicação dos valores de display:</h2>
+    <ul>
+        <li><strong>block:</strong> Ocupa toda a largura disponível e inicia em uma nova linha (ex: div, p, h1).</li>
+        <li><strong>inline:</strong> Ocupa apenas o espaço necessário e não quebra a linha (ex: span, a, strong).</li>
+        <li><strong>inline-block:</strong> Comporta-se como inline, mas permite definir altura e largura.</li>
+        <li><strong>flex:</strong> Cria um layout flexível, distribuindo elementos dinamicamente dentro de um contêiner.</li>
+        <li><strong>grid:</strong> Define um layout baseado em grade, organizando os elementos em linhas e colunas.</li>
+        <li><strong>none:</strong> Oculta o elemento completamente, sem ocupar espaço no layout.</li>
+    </ul>
+
 </body>
 </html>
