@@ -1,12 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 5</title>
-    <link rel='stylesheet' type='text/css' href='style.css'>
+    <title>Exemplo nth-child</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        ul li{
+            padding: 30px;
+            list-style: none;
+        }
+
+        ul li:nth-child(odd) {
+            background-color: #f2f2f2; /* Cinza claro para itens ímpares */
+        }
+
+        ul li:nth-child(even) {
+            background-color: #cce5ff; /* Azul claro para itens pares */
+        }
+
+        ul li:nth-child(1n) {
+            font-weight: bold; /* Deixa o terceiro item em negrito */
+        }
+    </style>
 </head>
 <body>
-    <h1>Bem-vindo à Aula 5</h1>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+        <li>Item 6</li>
+    </ul>
+
 </body>
 </html>

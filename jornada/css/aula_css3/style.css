@@ -1,5 +1,21 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    text-align: center;
+
+article {
+    width: 400px;
+    margin: 0 auto;
+}
+
+.cont {
+    background: red;
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+#txt1 {
+    color: aliceblue;
+}
+
+#txt2 {
+    color: blue;
+    padding: 20px;
 }
