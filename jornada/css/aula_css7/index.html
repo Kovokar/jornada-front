@@ -1,12 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 7</title>
-    <link rel='stylesheet' type='text/css' href='style.css'>
+    <title>Guia sobre Position no CSS</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+            font-weight: bold;
+        }
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 10px;
+        }
+        .absolute {
+            position: absolute;
+            top: 50px;
+            right: 20px;
+        }
+        .fixed {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+        }
+        .sticky {
+            position: sticky;
+            top: 10px;
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bem-vindo à Aula 7</h1>
+    <h1>Guia sobre a propriedade position no CSS</h1>
+    <p>Veja exemplos de diferentes valores de position no CSS:</p>
+    
+    <div class="box">Static (Padrão)</div>
+    <div class="box relative">Relative</div>
+    <div class="box absolute">Absolute</div>
+    <div class="box fixed">Fixed</div>
+    <div class="box sticky">Sticky</div>
+    
+    <h2>Explicação dos valores de position:</h2>
+    <ul>
+        <li><strong>Static:</strong> Padrão de todos os elementos. Segue o fluxo normal do documento.</li>
+        <li><strong>Relative:</strong> Mantém seu espaço original, mas pode ser deslocado com top, bottom, left e right.</li>
+        <li><strong>Absolute:</strong> Sai do fluxo normal e se posiciona em relação ao ancestral mais próximo com position diferente de static.</li>
+        <li><strong>Fixed:</strong> Fica fixo na tela, independente do scroll.</li>
+        <li><strong>Sticky:</strong> Se comporta como relative até atingir um ponto específico no scroll, onde se fixa.</li>
+    </ul>
 </body>
 </html>
