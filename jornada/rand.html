@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem Digital com HTML e CSS</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .quadrado {
+            position: relative;
+            width: 800px;
+            height: 800px;
+            background-color: white;
+            border: 5px solid red;
+        }
+
+        .linha-horizontal,
+        .linha-vertical {
+            position: absolute;
+            background-color: black;
+        }
+
+        .linha-horizontal {
+            width: 100%;
+            height: 2px;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        .linha-vertical {
+            width: 2px;
+            height: 100%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .circulo {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: white;
+            border: 3px solid red;
+        }
+
+        .canto-superior-esquerdo {
+            top: 0;
+            left: 0;
+        }
+
+        .canto-superior-direito {
+            top: 0;
+            right: 0;
+        }
+
+        .canto-inferior-esquerdo {
+            bottom: 0;
+            left: 0;
+        }
+
+        .canto-inferior-direito {
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="quadrado">
+        <div class="linha-horizontal"></div>
+        <div class="linha-vertical"></div>
+        <div class="circulo canto-superior-esquerdo"></div>
+        <div class="circulo canto-superior-direito"></div>
+        <div class="circulo canto-inferior-esquerdo"></div>
+        <div class="circulo canto-inferior-direito"></div>
+    </div>
+</body>
+</html>
