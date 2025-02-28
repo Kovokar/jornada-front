@@ -4,19 +4,119 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #4B0082, #8A2BE2);
+    background: radial-gradient(circle, 
+                rgb(74, 11, 74) 10%,   /* Centro mais forte */
+                rgb(30, 3, 30) 40%, 
+                rgb(24, 3, 24) 80%);  /* Se misturando com a cor do .pai */
+}
+
+p {
+    color: aliceblue;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .pai {
     display: flex;
-    width: 25%;
-    height: 50%;
-    background: rgb(165, 202, 65);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle at bottom center, 
+                rgb(74, 11, 74) 10%,  /* Centro inferior mais forte */
+                rgb(30, 3, 30, 0.7) 40%, 
+                rgb(2, 0, 2, 0.3) 70%, 
+                rgba(24, 3, 24, 0) 100%); /* Dissolve no centro */
+    background-color: rgb(24, 3, 24); /* Cor de fundo base */
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
 
-.txt1 p{
-    color: aliceblue;
+/* ------------------------------------------ */
+/* TXT1  */
+
+.txt1 p {
+    font-weight: bold;
+    font-size: large;
+    margin: 0px;
+    /* margin-top: 0px;
+    margin-bottom: 0px; */
 }
+
+.half-style {
+    font-weight: bolder; 
+}
+/* TXT1  */
+/* ------------------------------------------ */
+
+/* TXT2  */
+/* ------------------------------------------ */
+.txt2 p {
+    font-family: "Quartan LT Std Bold";
+    font-size: 35px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #20dbae;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    text-decoration-color: #FFF;
+}
+/* ------------------------------------------ */
+/* TXT2 */
+
+/* TXT3  */
+/* ------------------------------------------ */
+.txt3 p {
+    font-weight: 900;
+    font-size: medium;
+    margin-top: -10px;
+    margin-bottom: 0px;
+    color: #e44fde;
+}
+/* ------------------------------------------ */
+/* TXT3 */
+
+/* TXT4  */
+/* ------------------------------------------ */
+.txt4 {
+    font-weight: 600;
+}
+
+.txt4 p {
+    font-size: medium;
+    margin-top: 7px;
+    margin-bottom: 0px;
+    /* color: #e44fde; */
+}
+/* ------------------------------------------ */
+/* TXT4 */
+
+/* ul li{
+    color: aliceblue;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+} */
+
+ul {
+    color: aliceblue;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    list-style-type: none; /* Tipo de ponto */
+    padding: 0;
+    margin: 0;
+}
+
+
+ul li::before {
+    content: "✸"; /* Estrela sólida */
+    color: #e44fde; /* Cor dourada */
+    font-size: 14px;
+    margin-left: 8px;
+    margin-right: 4px;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrela de Davi com 3 Triângulos</title>
+    <style>
+        /* Estilo para o body (centralizando tudo na tela) */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4; /* Cor de fundo neutra */
+        }
+
+        /* Estilo para o contêiner da estrela */
+        .estrela-davi {
+            position: relative;
+            width: 120px; /* Aumentando para acomodar mais triângulos */
+            height: 120px;
+            transform: rotate(30deg); /* Gira a estrela para criar o formato */
+        }
+
+        /* Triângulo superior */
+        .triangulo-1, .triangulo-2, .triangulo-3 {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 60px solid transparent;
+            border-right: 60px solid transparent;
+        }
+
+        /* Triângulo superior (ponta para cima) */
+        .triangulo-1 {
+            border-bottom: 103.9px solid blue; /* Triângulo apontando para cima */
+            top: 0;
+        }
+
+        /* Triângulo inferior (ponta para baixo) */
+        .triangulo-2 {
+            border-top: 103.9px solid red; /* Triângulo apontando para baixo */
+            bottom: 0;
+        }
+
+        /* Novo Triângulo (lado esquerdo, apontando para a esquerda) */
+        .triangulo-3 {
+            border-top: 103.9px solid green; /* Triângulo apontando para a esquerda */
+            left: -60px; /* Posiciona à esquerda */
+            top: 15px; /* Ajusta a posição vertical para centralizar */
+        }
+    </style>
+</head>
+<body>
+    <div class="estrela-davi">
+        <div class="triangulo-1"></div>
+        <div class="triangulo-2"></div>
+        <div class="triangulo-3"></div>
+    </div>
+</body>
+</html>
