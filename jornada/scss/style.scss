@@ -1,0 +1,20 @@
+p {
+    span {
+        background-color: purple;
+    }
+
+    b {
+        background-color: orange;
+    }
+
+    &:hover{
+        color: white;
+    }
+}
+
+
+
+body {
+    color: blue;
+}
+
