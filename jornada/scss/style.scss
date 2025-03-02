@@ -1,0 +1,50 @@
+// Definindo cores como variáveis
+$orange: rgb(184, 121, 6);
+$purple: purple;
+$green: green;
+$white: white;
+
+// Mixin para estilo dos botões
+@mixin button-style($background, $color) {
+  background-color: $background;
+  color: $color;
+  width: 200px;
+  padding: 10px 0;
+  border: 0;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  &:hover {
+    background-color: darken($background, 5%);
+  }
+//   cursor: pointer; // Adicionando cursor pointer para os botões
+}
+
+// Estilo do body - centralizando com Flexbox
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; // Garantir que a altura ocupe a tela toda
+  background: black;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+// Estilo para os botões
+.btn-laranja {
+  @include button-style($orange, $white);
+}
+
+.btn-roxo {
+  @include button-style($purple, $orange);
+}
+
+.btn-verde {
+  @include button-style($green, $orange);
+}
+
+// Estilo para o container dos botões
+
