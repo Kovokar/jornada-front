@@ -1,0 +1,77 @@
+@charset "UTF-8";
+body {
+  margin: 10px; /* Remove a margem padrão do body */
+  padding: 0; /* Remove o padding padrão do body */
+  height: 100vh; /* Faz o body ocupar toda a altura da tela */
+  border: 5px solid black; /* Adiciona a borda */
+  box-sizing: border-box; /* Garante que a borda não aumente o tamanho da tela */
+  background: url("../../assets/paper.avif");
+}
+
+.girl {
+  font-family: "CCGlitterGirl Regular", sans-serif;
+  border-top: 0;
+  border-bottom: 0;
+}
+
+header {
+  height: 300px;
+  border-bottom: solid;
+}
+header .super-header {
+  display: flex;
+  justify-content: space-between; /* Isso vai distribuir os itens */
+  align-items: center; /* Alinha verticalmente os itens */
+  padding: 10px 20px;
+}
+header .super-header span {
+  font-family: Roboto;
+  font-size: large;
+  margin: 10px;
+}
+header .super-header #name {
+  flex-grow: 1;
+}
+header #std {
+  margin-top: 4rem;
+  display: block;
+  text-align: center;
+  font-size: xx-large;
+  font-family: "CCGlitterGirl Regular", sans-serif;
+}
+header #git {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  color: #7da3a3;
+}
+
+.meiota {
+  /* Adicionando borda a cada span */
+  display: flex;
+  border-bottom: solid;
+}
+.meiota span {
+  border-top: solid black; /* Defina a espessura e a cor da borda */
+  border-right: solid black; /* Defina a espessura e a cor da borda */
+  padding: 2px; /* Espaçamento interno para garantir que a borda não fique colada ao texto */
+  margin-bottom: 5px; /* Espaçamento entre os spans */
+  margin: 0;
+}
+.meiota .first {
+  width: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.meiota .sec {
+  width: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.meiota .third {
+  width: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=style.css.map */
