@@ -1,20 +1,18 @@
+.btn {
+    width: 200px;
+    padding: 10px 0;
+    background: none;
+    border: 0;
+    border-radius: 10px;
+}
+
+$orange: rgb(184, 121, 6);
+
+.btn-laranja {
+    @extend .btn;
+    background: $orange;
+  }
+  
 p {
-    span {
-        background-color: purple;
-    }
-
-    b {
-        background-color: orange;
-    }
-
-    &:hover{
-        color: white;
-    }
+    color: $orange;
 }
-
-
-
-body {
-    color: blue;
-}
-

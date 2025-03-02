@@ -1,15 +1,17 @@
-p span {
-  background-color: purple;
-}
-p b {
-  background-color: orange;
-}
-p:hover {
-  color: white;
+.btn, .btn-laranja {
+  width: 200px;
+  padding: 10px 0;
+  background: none;
+  border: 0;
+  border-radius: 10px;
 }
 
-body {
-  color: blue;
+.btn-laranja {
+  background: rgb(184, 121, 6);
+}
+
+p {
+  color: rgb(184, 121, 6);
 }
 
 /*# sourceMappingURL=style.css.map */
