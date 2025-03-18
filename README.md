@@ -2,7 +2,7 @@
 
 ## **Estrutura Geral**
 - **Frequência**: 5 dias por semana (segunda a sexta)
-- **Carga horária diária**: 2 a 3 horas
+- ~~**Carga horária diária**: 2 a 3 horas~~
 - **Metodologia**:
   - **Teoria**: Conceitos fundamentais e aprofundamento
   - **Prática**: Exercícios e mini-projetos
