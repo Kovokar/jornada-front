@@ -9,7 +9,7 @@ function carroussel(){
     if(idx > img.length-1){
         idx = 0
     }
-    imgs.style.transform = `translateX(${-500}px)`
+    imgs.style.transform = `translateX(${-idx*500}px)`
 }
 
 setInterval(carroussel, 1800)
