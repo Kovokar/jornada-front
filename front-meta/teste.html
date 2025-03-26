@@ -1,12 +1,50 @@
-<form>
-    <label>
-      <input type="radio" name="cor" value="vermelho"> Vermelho
-    </label>
-    <label>
-      <input type="radio" name="cor" value="azul"> Azul
-    </label>
-    <label>
-      <input type="radio" name="cor" value="verde"> Verde
-    </label>
-  </form>
-  
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo Flexbox</title>
+  <style>
+    /* Estilos CSS */
+    .card {
+      background-color: #333;
+      padding: 20px;
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+      border-radius: 10px;
+    }
+
+    .card > .row {
+      color: white; /* Cor do texto */
+      display: flex; /* Torna a row um contêiner flexível */
+      flex-wrap: nowrap; /* Impede a quebra dos itens para outra linha */
+      gap: 10px; /* Espaçamento entre os itens */
+    }
+
+    .row > div {
+      background-color: #555;
+      padding: 20px;
+      border-radius: 5px;
+      text-align: center;
+      flex: 1; /* Faz com que os itens se expandam para ocupar o espaço disponível */
+    }
+
+    /* Estilo adicional para melhorar a visualização */
+    .row > div:nth-child(odd) {
+      background-color: #666; /* Diferencia a cor dos itens */
+    }
+  </style>
+</head>
+<body>
+  <!-- Container Card -->
+  <div class="card">
+    <!-- Linha com itens -->
+    <div class="row">
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+    </div>
+  </div>
+</body>
+</html>
