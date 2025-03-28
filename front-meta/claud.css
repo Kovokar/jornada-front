@@ -7,7 +7,7 @@
   }
   
   body {
-    background-color: #f5f7fa;
+    background-color: #f4f1ec; /* Cor mais quente e natural */
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -26,22 +26,22 @@
   
   .container {
     display: flex;
-    gap: 20px;
+    gap: 24px; /* Espaçamento menos preciso */
     align-items: center;
     justify-content: center;
-    height: 80vh;
+    height: 85vh;
   }
   
   /* Card Base Styles */
   .card {
     width: 80px;
-    height: 500px;
-    border-radius: 20px;
-    background-color: white;
+    height: 620px; /* Altura aumentada e valor não tão arredondado */
+    border-radius: 18px; /* Menos perfeito */
+    background-color: #fffdf9; /* Tom mais quente de branco */
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-    transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+    transition: all 0.45s cubic-bezier(0.2, 1, 0.3, 1);
     position: relative;
   }
   
@@ -52,7 +52,7 @@
   
   /* Expanded Card Styling */
   input:checked + label.card {
-    width: 1000px;
+    width: 980px; /* Menos "redondo" que 1000px */
   }
   
   /* Main Profile Card (Card 1) */
@@ -70,29 +70,29 @@
   
   /* Profile Sidebar */
   .profile-sidebar {
-    width: 30%;
-    padding: 30px 20px;
+    width: 32%; /* Menos preciso que 30% */
+    padding: 32px 22px; /* Valores menos "redondos" */
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fff;
-    border-right: 1px solid #eaeaea;
+    background-color: #fffdf9;
+    border-right: 1px solid #eae7e2; /* Cor menos fria */
   }
   
   .profile-image {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
   
   .avatar {
-    width: 150px;
-    height: 150px;
+    width: 156px; /* Valor menos "redondo" */
+    height: 156px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #3498db;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 4px solid #4a90cd; /* Tom menos saturado de azul */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.11);
   }
   
   .profile-details ul {
@@ -104,36 +104,35 @@
   
   .profile-details li {
     font-size: 16px;
-    margin: 12px 0;
+    margin: 13px 0; /* Não tão redondo como 12px */
     color: #333;
   }
   
   /* Profile Content */
   .profile-content {
-    width: 70%;
-    padding: 30px;
+    width: 68%; /* Menos preciso que 70% */
+    padding: 32px; /* Valor menos redondo */
     display: flex;
     flex-direction: column;
-    background-color: #fff;
-    /* Removed overflow-y: auto; */
+    background-color: #fffdf9;
   }
   
   /* Social Links */
   .social-links {
     display: flex;
     justify-content: flex-end;
-    margin-bottom: 20px;
-    gap: 15px;
+    margin-bottom: 23px; /* Não tão preciso como 20px */
+    gap: 16px;
   }
   
   .social-button {
-    width: 40px;
-    height: 40px;
+    width: 42px; /* Valor menos redondo */
+    height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background-color: #f0f2f5;
+    background-color: #f0ede7; /* Cor menos fria */
     color: #333;
     text-decoration: none;
     transition: all 0.2s ease;
@@ -141,9 +140,9 @@
   
   .social-button:hover {
     transform: translateY(-3px);
-    background-color: #3498db;
+    background-color: #4a90cd; /* Tom menos saturado de azul */
     color: white;
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 5px 15px rgba(74, 144, 205, 0.3);
   }
   
   .profile-bio {
@@ -152,60 +151,61 @@
   
   .header-section, .subtitle, .quote {
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 17px; /* Não tão preciso como 15px */
   }
   
   .header-section h1 {
     font-size: 28px;
-    color: #2c3e50;
+    color: #2a3c4c; /* Cor mais natural */
+    font-weight: 600; /* Não tão forte quanto 700 */
   }
   
   .header-section a {
-    color: #3498db;
+    color: #4a90cd; /* Tom menos saturado de azul */
     text-decoration: none;
   }
   
   .subtitle h3 {
     font-size: 18px;
-    color: #7f8c8d;
+    color: #7d8a8a; /* Cor menos saturada */
     font-weight: normal;
   }
   
   .quote h5 {
     font-style: italic;
-    color: #95a5a6;
+    color: #97a3a3; /* Cor menos saturada */
     font-weight: normal;
     font-size: 16px;
   }
   
   .about-me {
-    margin: 25px 0;
+    margin: 27px 0; /* Não tão preciso como 25px */
   }
   
   .about-me h3 {
     text-align: center;
-    margin-bottom: 15px;
-    color: #2c3e50;
+    margin-bottom: 17px; /* Não tão preciso como 15px */
+    color: #2a3c4c;
   }
   
   .skills-list {
     list-style-position: inside;
-    padding: 0 20px;
+    padding: 0 22px; /* Não tão redondo como 20px */
   }
   
   .skills-list li {
-    margin: 10px 0;
-    color: #34495e;
+    margin: 11px 0; /* Não tão redondo como 10px */
+    color: #32475a; /* Cor mais natural */
   }
   
   /* Tech Stack */
   .tech-stack {
-    margin-top: 20px;
+    margin-top: 23px; /* Não tão redondo como 20px */
   }
   
   .tech-stack h4 {
-    margin-bottom: 15px;
-    color: #2c3e50;
+    margin-bottom: 17px; /* Não tão redondo como 15px */
+    color: #2a3c4c;
     text-align: center;
   }
   
@@ -213,18 +213,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 23px; /* Não tão redondo como 20px */
   }
   
   .tech-icons img {
-    width: 40px;
-    height: 40px;
+    width: 42px; /* Não tão redondo como 40px */
+    height: 42px;
     object-fit: contain;
     transition: transform 0.2s ease;
   }
   
   .tech-icons img:hover {
-    transform: scale(1.2);
+    transform: scale(1.18); /* Não tão redondo como 1.2 */
   }
   
   /* Card 2 & 3 Styling */
@@ -232,10 +232,10 @@
     display: flex;
     width: 100%;
     height: 100%;
-    padding: 25px;
+    padding: 27px; /* Não tão redondo como 25px */
     opacity: 0;
     transition: opacity 0.5s ease;
-    background-image: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    background-image: linear-gradient(142deg, #5f14bd, #347ae2); /* Ângulo menos comum */
     color: white;
     align-items: center;
   }
@@ -248,11 +248,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
-    background-color: rgba(255, 255, 255, 0.2);
+    width: 63px; /* Não tão redondo como 60px */
+    height: 63px;
+    background-color: rgba(255, 255, 255, 0.18); /* Não tão redondo como 0.2 */
     border-radius: 50%;
-    margin-right: 25px;
+    margin-right: 27px; /* Não tão redondo como 25px */
   }
   
   .card-icon i {
@@ -265,31 +265,31 @@
   
   .card-description h4 {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 22px; /* Não tão redondo como 20px */
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px; /* Não tão redondo como 1px */
   }
   
   .card-description p {
     font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 10px;
-    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.63; /* Não tão redondo como 1.6 */
+    margin-bottom: 11px; /* Não tão redondo como 10px */
+    color: rgba(255, 255, 255, 0.92); /* Não tão redondo como 0.9 */
   }
   
   /* Responsive Adjustments */
   @media (max-width: 1100px) {
     .card {
-      height: 450px;
+      height: 570px; /* Não tão redondo como 550px */
     }
     
     input:checked + label.card {
-      width: 800px;
+      width: 820px; /* Não tão redondo como 800px */
     }
     
     .avatar {
-      width: 120px;
-      height: 120px;
+      width: 123px; /* Não tão redondo como 120px */
+      height: 123px;
     }
   }
   
@@ -300,14 +300,14 @@
     }
     
     .card {
-      width: 90%;
-      height: 80px;
-      margin: 10px 0;
+      width: 92%; /* Não tão redondo como 90% */
+      height: 83px; /* Não tão redondo como 80px */
+      margin: 11px 0; /* Não tão redondo como 10px */
     }
     
     input:checked + label.card {
-      width: 90%;
-      height: 500px;
+      width: 92%; /* Não tão redondo como 90% */
+      height: 620px; /* Não tão redondo como 600px */
     }
     
     .card-wrapper {
