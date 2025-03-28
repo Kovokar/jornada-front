@@ -1,0 +1,324 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: #f5f7fa;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Carousel Container */
+  .carousel {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+  }
+  
+  /* Card Base Styles */
+  .card {
+    width: 80px;
+    height: 500px;
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+    position: relative;
+  }
+  
+  /* Hide Radio Buttons */
+  input[type="radio"] {
+    display: none;
+  }
+  
+  /* Expanded Card Styling */
+  input:checked + label.card {
+    width: 1000px;
+  }
+  
+  /* Main Profile Card (Card 1) */
+  .card-wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  input:checked + label .card-wrapper {
+    opacity: 1;
+  }
+  
+  /* Profile Sidebar */
+  .profile-sidebar {
+    width: 30%;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-right: 1px solid #eaeaea;
+  }
+  
+  .profile-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #3498db;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-details ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .profile-details li {
+    font-size: 16px;
+    margin: 12px 0;
+    color: #333;
+  }
+  
+  /* Profile Content */
+  .profile-content {
+    width: 70%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    /* Removed overflow-y: auto; */
+  }
+  
+  /* Social Links */
+  .social-links {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    gap: 15px;
+  }
+  
+  .social-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #f0f2f5;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .social-button:hover {
+    transform: translateY(-3px);
+    background-color: #3498db;
+    color: white;
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+  }
+  
+  .profile-bio {
+    width: 100%;
+  }
+  
+  .header-section, .subtitle, .quote {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  .header-section h1 {
+    font-size: 28px;
+    color: #2c3e50;
+  }
+  
+  .header-section a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .subtitle h3 {
+    font-size: 18px;
+    color: #7f8c8d;
+    font-weight: normal;
+  }
+  
+  .quote h5 {
+    font-style: italic;
+    color: #95a5a6;
+    font-weight: normal;
+    font-size: 16px;
+  }
+  
+  .about-me {
+    margin: 25px 0;
+  }
+  
+  .about-me h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #2c3e50;
+  }
+  
+  .skills-list {
+    list-style-position: inside;
+    padding: 0 20px;
+  }
+  
+  .skills-list li {
+    margin: 10px 0;
+    color: #34495e;
+  }
+  
+  /* Tech Stack */
+  .tech-stack {
+    margin-top: 20px;
+  }
+  
+  .tech-stack h4 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+    text-align: center;
+  }
+  
+  .tech-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .tech-icons img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  }
+  
+  .tech-icons img:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Card 2 & 3 Styling */
+  .card-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    background-image: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    align-items: center;
+  }
+  
+  input:checked + label .card-content {
+    opacity: 1;
+  }
+  
+  .card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    margin-right: 25px;
+  }
+  
+  .card-icon i {
+    font-size: 28px;
+  }
+  
+  .card-description {
+    flex: 1;
+  }
+  
+  .card-description h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .card-description p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 1100px) {
+    .card {
+      height: 450px;
+    }
+    
+    input:checked + label.card {
+      width: 800px;
+    }
+    
+    .avatar {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .container {
+      height: auto;
+      flex-direction: column;
+    }
+    
+    .card {
+      width: 90%;
+      height: 80px;
+      margin: 10px 0;
+    }
+    
+    input:checked + label.card {
+      width: 90%;
+      height: 500px;
+    }
+    
+    .card-wrapper {
+      flex-direction: column;
+    }
+    
+    .profile-sidebar, .profile-content {
+      width: 100%;
+    }
+    
+    .social-links {
+      justify-content: center;
+    }
+  }
