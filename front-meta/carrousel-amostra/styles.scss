@@ -86,7 +86,7 @@ input {
 }
 
 input:checked + label {
-    width: 600px;
+    width: 1000px;
 }
 
 // input:checked + label .description {
@@ -98,7 +98,7 @@ input:checked + label {
     background-image: url('./assets/butters.jpg');
 }
 .card[for="c2"] {
-    background-image: url('./assets/cachorro_cururu.jpeg');
+    // background-image: url('./assets/cachorro_cururu.jpeg');
 }
 .card[for="c3"] {
     background-image: url('./assets/cartman.jpg ');

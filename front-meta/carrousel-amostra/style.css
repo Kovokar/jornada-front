@@ -82,15 +82,11 @@ input {
 }
 
 input:checked + label {
-  width: 600px;
+  width: 1000px;
 }
 
 .card[for=c1] {
   background-image: url("./assets/butters.jpg");
-}
-
-.card[for=c2] {
-  background-image: url("./assets/cachorro_cururu.jpeg");
 }
 
 .card[for=c3] {

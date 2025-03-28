@@ -7,10 +7,6 @@
 
 body {
   background-color: #eeeeea;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .carroussel {
@@ -22,7 +18,7 @@ body {
 }
 
 .container {
-  height: 75vh;
+  height: 400px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: start;
