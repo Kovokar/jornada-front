@@ -1,14 +1,14 @@
 # app.py
 
-from flask import Flask
+from flask import Flask, render_template
 from db_connection import create_connection
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    """Página principal que só exibe uma mensagem simples."""
-    return "Bem-vindo ao sistema de QR Code!"
+    """Página principal que renderiza o template HTML."""
+    return render_template('index.html')
 
 @app.route('/ver_leitura', methods=['GET'])
 def ver_leitura():
