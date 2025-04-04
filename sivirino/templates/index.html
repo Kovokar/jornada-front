@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -9,6 +8,12 @@
 <body>
     <h1>Controle de Leituras do QR Code</h1>
     <p>Escolha uma das opções abaixo:</p>
+
+    <!-- Exibir o QR Code gerado -->
+    <h2>Escaneie o QR Code:</h2>
+    <img src="{{ url_for('static', filename='qrcode.png') }}" alt="QR Code">
+
+    <br><br>
 
     <!-- Botões para redirecionar para as rotas -->
     <button onclick="window.location.href='/ver_leitura'">Ver número de leituras</button>
