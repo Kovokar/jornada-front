@@ -1,2 +1,5 @@
 sivenv
 db_connection.py
+__pycache__
+db_connection.cpython-312.pyc
+*.pyc
