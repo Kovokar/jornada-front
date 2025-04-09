@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ARQUIVO_JS="now.js"
+RANDOM_NUM=$(( RANDOM % 21 ))
 
 # Verifica se o arquivo existe
 if [ ! -f "$ARQUIVO_JS" ]; then
