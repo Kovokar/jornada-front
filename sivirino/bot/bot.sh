@@ -8,7 +8,7 @@ if [ ! -f "$ARQUIVO_JS" ]; then
     exit 1
 fi
 
-for i in {1..10}
+for i in $(seq 1 $RANDOM_NUM)
 do
     echo "Executando $ARQUIVO_JS - Volta $i"
     node "$ARQUIVO_JS" > now.txt
