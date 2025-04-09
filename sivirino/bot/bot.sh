@@ -7,7 +7,6 @@ ARQUIVO_JS="now.js"
 if [ -f "$ARQUIVO_JS" ]; then
     echo "Executando $ARQUIVO_JS com Node.js..."
     node "$ARQUIVO_JS"
-    git log --oneline
     git add . && git commit -m "Atualização automática"
 else
     echo "Arquivo $ARQUIVO_JS não encontrado!"
