@@ -1,70 +1,137 @@
-# Getting Started with Create React App
+# 📍 Trilha de Estudos: React (do Básico ao Avançado)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## 🌱 Nível 1: Fundamentos do JavaScript (Pré-Requisitos)
 
-In the project directory, you can run:
+Antes de React, é essencial dominar JavaScript moderno.
 
-### `npm start`
+### Tópicos:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Variáveis (`let`, `const`)
+* Funções (declarativas, anônimas, arrow)
+* Arrays e objetos
+* Desestruturação
+* Spread e Rest
+* Promises e async/await
+* DOM e eventos
+* Módulos (import/export)
+* Classes e `this`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Recursos:
 
-### `npm test`
+* [JavaScript.info](https://javascript.info/)
+* Curso: "JavaScript Moderno" - Udemy
+* Canal: [Curso em Vídeo (JS)](https://www.youtube.com/playlist?list=PLHz_AreHm4dkZ5brYTTx1iZ1LwEVxg3K4)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## ✨ Nível 2: React Básico
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Tópicos:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* O que é React e por que usá-lo?
+* Instalação com Vite ou Create React App
+* JSX e sintaxe
+* Componentes funcionais
+* Props
+* State com `useState`
+* Eventos no React
+* Condicionais e listas (`map`, `key`)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Recursos:
 
-### `npm run eject`
+* [Documentação Oficial React](https://react.dev/learn)
+* Projeto prático: To-do List
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🌟 Nível 3: React Intermediário
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Tópicos:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Ciclo de vida com `useEffect`
+* Componentes controlados e formulários
+* Lifting state up
+* Context API
+* Requisições com `fetch` ou `axios`
+* Hooks personalizados (custom hooks)
+* React Router (roteamento)
 
-## Learn More
+### Recursos:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Projeto: Blog com React Router e API fake (ex: JSONPlaceholder)
+* Curso: "React do Zero a Maestria" - Udemy
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🛠️ Nível 4: React Avançado
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Tópicos:
 
-### Analyzing the Bundle Size
+* Otimização com `useMemo`, `useCallback`, `React.memo`
+* Manipulação direta do DOM com `useRef`
+* Code Splitting e Lazy Loading
+* Portais React
+* Error Boundaries
+* Testes com React Testing Library e Jest
+* TypeScript com React
+* ESLint e Prettier
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Recursos:
 
-### Making a Progressive Web App
+* Projeto: Dashboard Admin com gráficos
+* Documentação oficial + guias de testes
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📊 Nível 5: Estado Global e Ferramentas
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Tópicos:
 
-### Deployment
+* Redux Toolkit (incluindo `createSlice`, `configureStore`)
+* Zustand (alternativa simples ao Redux)
+* React Query ou TanStack Query (gestão de requisições)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Recursos:
 
-### `npm run build` fails to minify
+* Curso: "Redux com React" - Alura / Udemy
+* Projeto: E-commerce com carrinho global
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 📚 Nível 6: Fullstack com React (Bônus)
+
+### Tópicos:
+
+* Integração com APIs (Node.js, Firebase, Supabase)
+* Autenticação (JWT, OAuth, Firebase Auth)
+* Deploy: Vercel, Netlify, Render
+
+### Projeto final:
+
+* Sistema completo com frontend (React) + backend (Node.js/Firebase)
+
+---
+
+## 🎨 Projetos Recomendados
+
+1. **To-do List** (React Básico)
+2. **Blog com API externa** (React Intermediário)
+3. **E-commerce com Redux** (React Avançado)
+4. **Dashboard Admin com charts**
+5. **Sistema de autenticação + CRUD completo**
+
+---
+
+## 🏆 Dicas Finais
+
+* Construa projetos práticos sempre.
+* Use TypeScript o quanto antes.
+* Leia a documentação oficial com frequência.
+* Participe da comunidade (Discord, GitHub, Stack Overflow).
+* Evite decoreba; entenda a fundo os conceitos.
+
+---
+
+Boa jornada! ✨
