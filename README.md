@@ -37,7 +37,7 @@
 ### **Semana 4 - Segurança**
 - OWASP Top 10 e boas práticas gerais
 - Proteção contra XSS, CSRF e SQL Injection
-- Hashing de senhas e autenticação segura
+- Hashing de senhas e autent. icação segura
 - Segurança em APIs (Rate limiting, CORS, Headers HTTP)
 - Revisão e exercícios de segurança
 
