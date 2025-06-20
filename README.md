@@ -4,7 +4,7 @@
 - **Frequência**: 5 dias por semana (segunda a sexta)
 - ~~**Carga horária diária**: 2 a 3 horas~~
 - ~~**Metodologia**:~~
-  - **Teoria**: Conceitos fundamentais e aprofundamento
+  - ~**Teoria**: Conceitos fundamentais e aprofundamento~
   - **Prática**: Exercícios e mini-projetos
   - **Projeto mensal**: Para consolidar o aprendizado
   - **Revisão e desafios**
