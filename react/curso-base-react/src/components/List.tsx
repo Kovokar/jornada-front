@@ -1,6 +1,6 @@
 export const TodoList = ({ children }: React.PropsWithChildren) => {
     return (
-        <ol>
+        <ol className="todo-list">
             {children}
         </ol>
     )

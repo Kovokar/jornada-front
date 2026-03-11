@@ -5,21 +5,21 @@ interface ITodoItemProps {
     onRemove(): void,
     onToggleConcluido(): void
 }
+
 export const TodoItem = ({ label, concluido, onRemove, onToggleConcluido }: ITodoItemProps) => {
     return (
-        <li
-            style={{
-                color: concluido ? "green" : "black",
-                textDecoration: concluido ? "line-through" : "none"
-            }}
-        >
+        <li className={`todo-item ${concluido ? 'completed' : ''}`}>
             <input
                 type="checkbox"
                 checked={concluido}
-                onChange={onToggleConcluido} // Corrigido: chama a função diretamente
+                onChange={onToggleConcluido}
             />
-            {label}
-            <button onClick={onRemove}>Remove</button>
+            <span className={`todo-label ${concluido ? 'completed' : ''}`}>
+                {label}
+            </span>
+            <button className="todo-remove-btn" onClick={onRemove}>
+                Remover
+            </button>
         </li>
     )
 }

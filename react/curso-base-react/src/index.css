@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    @apply bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen p-6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+}
+
+/* Animações avançadas */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Estilos customizados */
+.todo-container {
+    @apply max-w-2xl mx-auto;
+}
+
+.todo-input-wrapper {
+    @apply flex gap-2 mb-8;
+}
+
+.todo-input {
+    @apply flex-1 px-4 py-3 rounded-lg border-2 border-indigo-300 focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-200 transition-all duration-200 shadow-sm;
+}
+
+.todo-button {
+    @apply px-6 py-3 bg-indigo-600 text-white font-semibold rounded-lg hover:bg-indigo-700 active:scale-95 transition-all duration-150 shadow-md hover:shadow-lg;
+}
+
+.todo-list {
+    @apply space-y-2;
+}
+
+.todo-item {
+    @apply flex items-center gap-3 p-4 bg-white rounded-lg shadow-sm border-l-4 border-indigo-400 hover:shadow-md transition-all duration-200 slide-in;
+}
+
+.todo-item.completed {
+    @apply bg-green-50 border-l-4 border-green-400 opacity-75;
+}
+
+.todo-item input[type="checkbox"] {
+    @apply w-5 h-5 cursor-pointer accent-indigo-600 rounded;
+}
+
+.todo-label {
+    @apply flex-1 text-gray-800 font-medium;
+}
+
+.todo-label.completed {
+    @apply line-through text-gray-400;
+}
+
+.todo-remove-btn {
+    @apply px-3 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 active:scale-95 transition-all duration-150 text-sm font-semibold;
+}
+
+.app-title {
+    @apply text-3xl font-bold text-center mb-8 text-indigo-900 drop-shadow-sm;
+}

@@ -41,7 +41,8 @@ export function App() {
 
 
   return (
-    <div>
+    <div className="todo-container">
+      <h1 className="app-title">📝 Minhas Tarefas</h1>
       <InputAdd onAdd={handleAdd} />
       <TodoList>
         {list.map((listItem) => (
