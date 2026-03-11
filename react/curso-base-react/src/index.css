@@ -26,18 +26,24 @@ body {
     }
 }
 
-@keyframes fadeOut {
+@keyframes slideOutRight {
     from {
         opacity: 1;
+        transform: translateX(0);
     }
 
     to {
         opacity: 0;
+        transform: translateX(100%);
     }
 }
 
 .slide-in {
     animation: slideIn 0.3s ease-out;
+}
+
+.slide-out {
+    animation: slideOutRight 0.4s ease-in forwards;
 }
 
 /* Estilos customizados */
@@ -63,10 +69,18 @@ body {
 
 .todo-item {
     @apply flex items-center gap-3 p-4 bg-white rounded-lg shadow-sm border-l-4 border-indigo-400 hover:shadow-md transition-all duration-200 slide-in;
+    background-color: #ffffff;
+    border-left-color: #4f46e5;
 }
 
 .todo-item.completed {
     @apply bg-green-50 border-l-4 border-green-400 opacity-75;
+    background-color: #f0fdf4;
+    border-left-color: #22c55e;
+}
+
+.todo-item.removing {
+    @apply slide-out;
 }
 
 .todo-item input[type="checkbox"] {
@@ -75,10 +89,12 @@ body {
 
 .todo-label {
     @apply flex-1 text-gray-800 font-medium;
+    color: #1f2937;
 }
 
 .todo-label.completed {
     @apply line-through text-gray-400;
+    color: #9ca3af;
 }
 
 .todo-remove-btn {

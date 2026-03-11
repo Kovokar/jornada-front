@@ -14,12 +14,13 @@ export function App() {
 
 
   const toggleConcluido = (id: number) => {
-    TodoAPI.updateById(id, { concluido: !list.find(item => item.id === id)?.concluido }).
+    const isConcluido = !list.find(item => item.id === id)?.concluido;
+    TodoAPI.updateById(id, { concluido: isConcluido }).
       then(() => {
         setList([
           ...list.map(item => ({
             ...item,
-            concluido: item.id === id ? true : item.concluido
+            concluido: item.id === id ? isConcluido : item.concluido
           }))
         ]);
       })

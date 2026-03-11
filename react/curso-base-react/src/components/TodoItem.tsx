@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 interface ITodoItemProps {
     id: number,
     label: string,
@@ -7,8 +9,17 @@ interface ITodoItemProps {
 }
 
 export const TodoItem = ({ label, concluido, onRemove, onToggleConcluido }: ITodoItemProps) => {
+    const [isRemoving, setIsRemoving] = useState(false);
+
+    const handleRemove = () => {
+        setIsRemoving(true);
+        setTimeout(() => {
+            onRemove();
+        }, 400);
+    }
+
     return (
-        <li className={`todo-item ${concluido ? 'completed' : ''}`}>
+        <li className={`todo-item ${concluido ? 'completed' : ''} ${isRemoving ? 'removing' : ''}`}>
             <input
                 type="checkbox"
                 checked={concluido}
@@ -17,7 +28,7 @@ export const TodoItem = ({ label, concluido, onRemove, onToggleConcluido }: ITod
             <span className={`todo-label ${concluido ? 'completed' : ''}`}>
                 {label}
             </span>
-            <button className="todo-remove-btn" onClick={onRemove}>
+            <button className="todo-remove-btn" onClick={handleRemove}>
                 Remover
             </button>
         </li>
