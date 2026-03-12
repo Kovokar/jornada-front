@@ -115,7 +115,7 @@ a:hover {
 /* Movies Container */
 .movies-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-bottom: 2rem;
 }
@@ -396,7 +396,7 @@ a:hover {
     }
 
     .movies-container {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
     }
 
@@ -423,5 +423,13 @@ a:hover {
 
     .not-found-icon {
         font-size: 3.5rem;
+    }
+}
+
+/* Mobile pequeno - 1 coluna */
+@media (max-width: 480px) {
+    .movies-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
 }
