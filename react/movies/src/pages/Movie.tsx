@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { FaStar } from "react-icons/fa";
+import { MovieDetail } from "../components/MovieDetail";
+import { LoadingSpinner } from "../components/LoadingSpinner";
+import { ErrorMessage } from "../components/ErrorMessage";
+import { NotFound } from "../components/NotFound";
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 const imagesURL = import.meta.env.VITE_IMG;
 
-type MovieDetail = {
+type MovieDetailType = {
     id: number;
     title: string;
     poster_path: string;
@@ -22,90 +25,52 @@ type MovieDetail = {
 
 export const Movie = () => {
     const { id } = useParams<{ id: string }>();
-    const [movie, setMovie] = useState<MovieDetail | null>(null);
+    const [movie, setMovie] = useState<MovieDetailType | null>(null);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         const getMovieDetails = async () => {
+            if (!id) {
+                setError("ID do filme não fornecido");
+                setLoading(false);
+                return;
+            }
+
             try {
                 const response = await fetch(
                     `${moviesURL}${id}?${apiKey}`
                 );
+                if (!response.ok) {
+                    setMovie(null);
+                    setLoading(false);
+                    return;
+                }
                 const data = await response.json();
                 setMovie(data);
+                setError(null);
             } catch (error) {
                 console.error("Erro ao buscar filme:", error);
+                setError("Erro ao carregar o filme. Tente novamente mais tarde.");
             } finally {
                 setLoading(false);
             }
         };
 
-        if (id) {
-            getMovieDetails();
-        }
+        getMovieDetails();
     }, [id]);
 
     if (loading) {
-        return <div className="container"><p>Carregando...</p></div>;
+        return <LoadingSpinner />;
+    }
+
+    if (error) {
+        return <ErrorMessage message={error} />;
     }
 
     if (!movie) {
-        return <div className="container"><p>Filme não encontrado</p></div>;
+        return <NotFound />;
     }
 
-    return (
-        <div id="movie-page">
-            <div className="movie-container">
-                <div className="movie-header">
-                    <div className="movie-poster">
-                        <img
-                            src={imagesURL + movie.poster_path}
-                            alt={movie.title}
-                        />
-                    </div>
-                    <div className="movie-info">
-                        <h1>{movie.title}</h1>
-                        <p className="movie-rating">
-                            <FaStar className="star" /> {movie.vote_average.toFixed(1)}/10
-                        </p>
-                        <p className="movie-date">
-                            Lançamento: {new Date(movie.release_date).toLocaleDateString("pt-BR")}
-                        </p>
-                        {movie.runtime > 0 && (
-                            <p className="movie-runtime">
-                                Duração: {movie.runtime} minutos
-                            </p>
-                        )}
-                        {movie.genres.length > 0 && (
-                            <p className="movie-genres">
-                                Gêneros: {movie.genres.map((g) => g.name).join(", ")}
-                            </p>
-                        )}
-                        {movie.budget > 0 && (
-                            <p className="movie-budget">
-                                Orçamento: ${(movie.budget / 1000000).toFixed(1)}M
-                            </p>
-                        )}
-                        {movie.revenue > 0 && (
-                            <p className="movie-revenue">
-                                Receita: ${(movie.revenue / 1000000).toFixed(1)}M
-                            </p>
-                        )}
-                    </div>
-                </div>
-
-                <div className="movie-overview">
-                    <h2>Sinopse</h2>
-                    <p>{movie.overview}</p>
-                </div>
-
-                {movie.production_companies.length > 0 && (
-                    <div className="movie-production">
-                        <h2>Produção</h2>
-                        <p>{movie.production_companies.map((c) => c.name).join(", ")}</p>
-                    </div>
-                )}
-            </div>
-        </div>
-    );
-}
+    return <MovieDetail movie={movie} imagesURL={imagesURL} />;
+};
