@@ -77,12 +77,12 @@ export function LoginForm(): ReactNode {
                 onChange={handlePasswordChange}
             />
 
-            {/* <RememberMeCheckbox
+            <RememberMeCheckbox
                 checked={formData.rememberMe}
                 onChange={handleRememberMeChange}
-            /> */}
+            />
 
-            {/* <Button
+            <Button
                 type="submit"
                 size="lg"
                 className="w-full"
@@ -90,9 +90,9 @@ export function LoginForm(): ReactNode {
                 disabled={isLoading}
             >
                 Entrar
-            </Button> */}
+            </Button>
 
-            {/* <LoginFooter /> */}
+            <LoginFooter />
         </form>
     );
 }
